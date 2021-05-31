@@ -1,0 +1,19 @@
+<?php
+class Klaim extends CI_Controller
+{
+	function __construct()
+	{
+		parent::__construct();
+		if ($this->session->userdata('logged') != TRUE) {
+			$url = base_url('login');
+			redirect($url);
+		}
+	}
+
+	public function index()
+	{
+		$this->load->view('admin_template/header');
+		$this->load->view('backend/pengajuan/klaim');
+		$this->load->view('admin_template/footer');
+	}
+}
