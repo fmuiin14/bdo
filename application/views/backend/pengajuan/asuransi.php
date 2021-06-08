@@ -17,42 +17,48 @@
     <div class="content">
         <div class="container-fluid">
             <div class="row">
-                <!-- /.col-md-6 -->
-                <div class="col-md-12">
-                    <div class="row">
-                        <div class="col-md-10 mx-auto">
-                            <div class="card card-primary card-outline">
-                                <div class="card-body text-center">
-                                    <p class="card-text">Kamu bisa menambah data asuransi, dengan menekan tombol di bawah ini.</p>
-                                    <a href="<?= site_url('backend/siswa/tambah_data_siswa') ?>" class="btn btn-primary">Tambah Data Asuransi</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.col-md-6 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
                 <div class="col-md-12">
                     <div class="bg-white p-4">
                         <div class="table-responsive">
                             <table id="nama-table" class="table align-items-center table-flush">
                                 <thead class="thead-light">
                                     <tr class="text-center">
-                                        <th scope="col">ID</th>
-                                        <th scope="col">Nama</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">KTP</th>
-                                        <th scope="col">No HP</th>
-                                        <th scope="col">Jenis Kelamin</th>
-                                        <th scope="col">NPWP</th>
-                                        <th scope="col">Status</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama Client</th>
+                                        <th scope="col">Alamat</th>
+                                        <th scope="col">Narahubung</th>
+                                        <th scope="col">No HP Narahubung</th>
+                                        <th scope="col">Email Narahubung</th>
+                                        <th scope="col">No Kantor</th>
+                                        <th scope="col">Email Kantor</th>
+                                        <th scope="col">Daftar Asuransi</th>
+                                        <th scope="col">Target Premi</th>
+                                        <th scope="col">Detail Spesifikasi</th>
+                                        <th scope="col">Status Pengajuan</th>
                                         <th scope="col">Aksi</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
+                                <?php $no = 1;
+                                foreach ($asuransis as $as) {
+                                ?>
+                                    <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $as->nama_client ?></td>
+                                        <td><?= $as->alamat ?></td>
+                                        <td><?= $as->cp_orang ?></td>
+                                        <td><?= $as->no_hp_cp ?></td>
+                                        <td><?= $as->email_cp ?></td>
+                                        <td><?= $as->no_kantor ?></td>
+                                        <td><?= $as->email_kantor ?></td>
+                                        <td><?= $as->daftar_asuransi_id ?></td>
+                                        <td><?= $as->target_premi ?></td>
+                                        <td><?= $as->detail_spesifikasi_produk ?></td>
+                                        <td><?= $as->status_pengajuan ?></td>
+                                        <td>#</td>
+                                    </tr>
+                                    <?php } ?>
                                 </tbody>
                             </table>
                         </div>

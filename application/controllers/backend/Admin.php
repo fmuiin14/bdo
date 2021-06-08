@@ -20,8 +20,6 @@ class Admin extends CI_Controller
 
     public function registrasi()
     {
-        // $data['registrations'] = $this->db->get_where('users', ['email' => $this->session->userdata('email')])->row_array();
-
         $data['registrations'] = $this->Admin_model->tampil_data_register()->result();
 
 
