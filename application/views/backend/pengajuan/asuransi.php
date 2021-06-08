@@ -52,10 +52,10 @@
                                         <td><?= $as->email_cp ?></td>
                                         <td><?= $as->no_kantor ?></td>
                                         <td><?= $as->email_kantor ?></td>
-                                        <td><?= $as->daftar_asuransi_id ?></td>
+                                        <td><?= $as->nama_asuransi ?></td>
                                         <td><?= $as->target_premi ?></td>
                                         <td><?= $as->detail_spesifikasi_produk ?></td>
-                                        <td><?= $as->status_pengajuan ?></td>
+                                        <td><?= $as->nama_status ?></td>
                                         <td>#</td>
                                     </tr>
                                     <?php } ?>
